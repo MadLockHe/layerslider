@@ -1,0 +1,26 @@
+{
+  "name": "layerslider",
+  "version": "5.3.2",
+  "authors": [
+    "delta54 <support@e154.ru>"
+  ],
+  "license": "MIT",
+  "homepage": "e154.ru",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": [
+    "layerslider/css/layerslider.css",
+    "layerslider/js/greensock.js",
+    "layerslider/js/layerslider.transitions.js",
+    "layerslider/js/layerslider.kreaturamedia.jquery.js",
+    "layerslider/angular/layerslider.js"
+  ],
+  "dependencies": {
+    "jquery": "2.0.3"
+  }
+}
