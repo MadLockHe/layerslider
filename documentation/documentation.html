@@ -317,38 +317,38 @@
 
 					<!-- Initializing -->
 					<article>
-						<h4>Slider setup</h4>
-						<p>You should initialize the slider plugin by calling the <code>layerslider()</code> method on the target element. Since we used the "layerslider" ID in our sample markup, we get that by jQuery and initialize LayerSlider on that element. See the following example:</p>
+						<h4>滑块设置</h4>
+						<p>在滑块容器上调用本插件的<code>layerslider()</code> 来初始化，由于我们前面使用ID标记了滑块容器，我们用JQuery获取滑块容器来初始化本插件。请看下面的例子：</p>
 						<pre name="code" class="brush: js">
 						&lt;script type="text/javascript"&gt;
 
-							// Running the code when the document is ready
+							// 在文档加载完成后初始化本插件
 							$(document).ready(function(){
 
-								// Calling LayerSlider on the target element
+								// 在目标元素上调用LayerSlider方法
 								$('#layerslider').layerSlider({
 
-									// Slider options goes here,
-									// please check the 'List of slider options' section in the documentation
+									// 滑块选项放在这里
+									// 参考“滑块参数列表”中的参数
 								});
 							});
 
 						&lt;/script&gt;</pre>
-						<figure>Initializing the plugin</figure>
+						<figure>初始化本插件</figure>
 						<p>
-							This code is placed usually after the closing &lt;/body&gt; tag but the most important thing is that it must be placed after the included resource script files.
+						    此代码通常放置在<code>&lt;/body&gt;</code> 标签之后，但是重要的是，它必需放到库文件之后。
 						</p>
 						<div class="km-notification info cf">
 							<span class="icon-info-circled"></span>
-							Remove the <code>&lt;script&gt;</code> wrapper element if you will use this code in an external JavaScript file.
+							如果你使用外部js文件执行此操作，请移除本文件中<code>&lt;script&gt;</code>标签。
 						</div>
 					</article>
 
 
 					<!-- List of slider settings -->
 					<article>
-						<h4>Configuring the slider</h4>
-						<p>LayerSlider has several options to customize your sliders. These options can be defined by passing an object with your changed values. The nex example shows how to include some custom properties.</p>
+						<h4>配置滑块</h4>
+						<p>LayerSlider有一些参数来自定义你的滑块. These options can be defined by passing an object with your changed values. The nex example shows how to include some custom properties.</p>
 						<pre name="code" class="brush: js">
 						&lt;script type="text/javascript"&gt;
 
@@ -368,16 +368,16 @@
 							});
 
 						&lt;/script&gt;</pre>
-						<figure>Initializing the plugin with custom slider options</figure>
-						<h4>List of the available slider options</h4>
+						<figure>通过这些参数初始化滑块</figure>
+						<h4>可用滑块参数列表</h4>
 						<div class="table">
 							<table>
 								<thead>
 									<tr>
-										<th>Layout properties</th>
-										<th class="c">Values</th>
-										<th class="c">Defaults</th>
-										<th>Description</th>
+										<th>布局属性</th>
+										<th class="c">值</th>
+										<th class="c">默认值</th>
+										<th>描述</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -385,7 +385,7 @@
 										<td>responsive</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">true</td>
-										<td>Responsive mode provides optimal viewing experience across a wide range of devices (from desktop to mobile) by adapting and scaling your sliders for the viewing environment.</td>
+										<td>响应式提供多种设备的最佳用户体验</td>
 									</tr>
 									<tr>
 										<td>responsiveUnder</td>
