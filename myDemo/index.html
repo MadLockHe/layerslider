@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title></title>
+<!-- LayerSlider样式 -->
+<link rel="stylesheet" href="../layerslider/css/layerslider.css" type="text/css">
+ 
+<!-- 外部库  jQuery & GreenSock -->
+<script src="../layerslider/js/jquery.js" type="text/javascript"></script>
+<script src="../layerslider/js/greensock.js" type="text/javascript"></script>
+ 
+<!-- LayerSlider 库文件 -->
+<script src="../layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
+<script src="../layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
+<style type="text/css">
+* {margin: 0;padding: 0;color: #FFF;}
+#layerslider {width: 800px;height: 500px;margin: auto;background: #333;}
+</style>
+</head>
+<body>
+<div id="layerslider">
+	<div class="ls-slide">
+		<img src="../examples/sliderimages/455293175_1280.jpg" class="ls-bg" alt="背景"/>
+		<img src="../examples/sliderimages/a-l-4.png" class="ls-tn" alt="缩略图"/>
+		<h1 class="ls-l" style="top: 100px;left: 100px;">这是一个标题</h1>
+		<a href="javascript:;" class="ls-link" title="滑块链接"></a>
+	</div>
+	<div class="ls-slide">
+		<img src="../examples/sliderimages/abyss-bg.jpg" class="ls-bg"/>
+		<div class="ls-l" data-ls="offsetxin:0;offsetxout:0;offsetyin:-200;offsetyout:200;delayin:0;showuntil:1000;" style="left: 50%;top: 40%;">
+			这是一段文字
+		</div>
+		<div class="ls-l" data-ls="offsetxin:-200;offsetxout:200;transformoriginin:10 10 10;transformoriginout:0 0 0" style="left: 50%;top: 50%;">
+			<img src="../documentation/assets/img/sample_slide_2.png"/>
+		</div>
+	</div>
+</div>
+<script type="text/javascript"> 
+$(document).ready(function(){ 
+    $('#layerslider').layerSlider({
+    	autoStart: true,
+        firstLayer: 1,
+        skin: 'v5',
+        skinsPath: '../layerslider/skins/',
+        responsive:false,
+        responsiveUnder:800,
+    });
+}); 
+</script>
+</body>
+</html>

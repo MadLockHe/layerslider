@@ -1296,7 +1296,7 @@
 										</td>
 										<td class="c">left, right or a &lt;num&gt;</td>
 										<td class="c">80<br>-80</td>
-										<td>The horizontal offset to align the starting position of layers. Positive and negative numbers are allowed. Set left or right to position layers out of the slider.</td>
+										<td>图层水平方向动画的开始位置，可用正数，负数，left,right来设置.例如：<code>offsetxin:-80;offsetxout:80</code>,图层将从目标位置水平向左偏移80像素的方向进入，从目标位置向右移动80像素退出。</td>
 									</tr>
 									<tr>
 										<td>
@@ -1305,7 +1305,7 @@
 										</td>
 										<td class="c">top, bottom or a &lt;num&gt;</td>
 										<td class="c">0</td>
-										<td>The vertical offset to align the starting position of layers. Positive and negative numbers are allowed. Set top or bottom to position layers out of the slider.</td>
+										<td>图层垂直方向动画的开始位置，可用正数，负数，top，bottom来设置.例如：<code>offsetyin:bottom;offsetyout:top;</code>，滑动原理同上。默认垂直方向无动画。</td>
 									</tr>
 									<tr>
 										<td>
@@ -1313,13 +1313,13 @@
 										</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">0</td>
-										<td>Delays the layer transitions with the specified amount of time in milliseconds.</td>
+										<td>图层动画延迟执行的时间（单位：ms）.</td>
 									</tr>
 									<tr>
 										<td>showuntil</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">0</td>
-										<td>After animating in, the layer will be visible for the time you specify here, then it will animate out. You can use this setting for layers to leave the slide before the slide change or for example before other layers will slide in or out. This value in millisecs, so the value 1000 means 1 second.</td>
+										<td>动画执行完后图层的停留时间（单位：ms）.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1328,7 +1328,7 @@
 										</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">1000</td>
-										<td>The duration of layer transitions.</td>
+										<td>图层进入/退出的持续时间.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1337,7 +1337,7 @@
 										</td>
 										<td class="c">easing_name</td>
 										<td class="c">easeInOutQuint</td>
-										<td>The timing function used for transitions. See <a href="http://easings.net/">easings.net</a> for more information.</td>
+										<td>动画的过度效果.详见<a href="http://easings.net/">easings.net</a>.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1346,7 +1346,7 @@
 										</td>
 										<td class="c">true, false</td>
 										<td class="c">true</td>
-										<td>Fades in / out the layer during the transition.</td>
+										<td>动画过程中是否淡入/淡出.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1355,7 +1355,7 @@
 										</td>
 										<td class="c">&lt;angle&gt;</td>
 										<td class="c">0</td>
-										<td>Rotates the layer clockwise from the given angle to zero degree. Negative values are allowed for anticlockwise rotation.</td>
+										<td>图层的旋转角度，可用负值。</td>
 									</tr>
 									<tr>
 										<td>
@@ -1364,7 +1364,7 @@
 										</td>
 										<td class="c">&lt;angle&gt;</td>
 										<td class="c">0</td>
-										<td>Rotates the layer along the X (horizontal) axis from the given angle to zero degree. Negative values are allowed for reverse direction.</td>
+										<td>图层在X轴方向的旋转角度.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1373,7 +1373,7 @@
 										</td>
 										<td class="c">&lt;angle&gt;</td>
 										<td class="c">0</td>
-										<td>Rotates the layer along the Y (vertical) axis from the given angle to zero degree. Negative values are allowed for reverse direction.</td>
+										<td>图层在Y轴方向的旋转角度.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1382,7 +1382,7 @@
 										</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">1</td>
-										<td>Scales the layer's width from the given value to its original size.</td>
+										<td>图层在X轴上缩放比例.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1391,7 +1391,7 @@
 										</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">1</td>
-										<td>Scales the layer's height from the given value to its original size.</td>
+										<td>图层在Y轴方向的缩放比例.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1400,7 +1400,7 @@
 										</td>
 										<td class="c">&lt;angle&gt;</td>
 										<td class="c">0</td>
-										<td>Skews the layer along the X (horizontal) axis from the given angle to 0 degree. Negative values are allowed for reverse direction.</td>
+										<td>图层在X轴平面的倾斜角度.</td>
 									</tr>
 									<tr>
 										<td>
@@ -1409,7 +1409,7 @@
 										</td>
 										<td class="c">&lt;angle&gt;</td>
 										<td class="c">0</td>
-										<td>Skews the layer along the Y (vertical) axis from the given angle to 0 degree. Negative values are allowed for reverse direction.</td>
+										<td>图层在Y轴平面内的倾斜角度.</td>
 									</tr>
 									<tr>
 										<td>
