@@ -67,13 +67,13 @@
 					</ul>
 				</li>
 				<li>
-					<span>图层</span>
+					<span>层</span>
 					<ul>
-						<li data-deeplink="adding-layers">添加图层</li>
-						<li data-deeplink="positioning-layers">图层位置</li>
-						<li data-deeplink="linking-layers">图层链接</li>
+						<li data-deeplink="adding-layers">添加层</li>
+						<li data-deeplink="positioning-layers">动画元素位置</li>
+						<li data-deeplink="linking-layers">动画元素链接</li>
 						<li data-deeplink="adding-media">嵌入视频/音频</li>
-						<li data-deeplink="layer-transitions">图层过度方式</li>
+						<li data-deeplink="layer-transitions">动画过度方式</li>
 						<li data-deeplink="parallax-layers">视差层</li>
 					</ul>
 				</li>
@@ -1097,67 +1097,68 @@
 
 					<!-- Adding a layer -->
 					<article>
-						<h4>What is a layer?</h4>
+						<h4>层容器</h4>
 						<p>
-							Layers are the contents of slides. Unlike with conventional slider plugins, you can use multiple contents in a slide. These can be images, text, custom HTML, video and audio contents.
+							<img src="./assets/img/exp.jpg" style="width: 100%;"/>
+							不同于传统的幻灯片，你可以在层容器加添加多个动画元素（可以是图片，文本，视频，音乐，自定义HTML等）。
 						</p>
 
-						<h4>Adding a layer</h4>
+						<h4>添加一个动画元素</h4>
 						<p>
-							You can add layers by appending standard HTML elements  into slides with the <code>ls-l</code> class name. For image layers use the &lt;img&gt; element. For text/HTML layers use the appropriate element like &lt;div&gt;, &lt;p&gt;, &lt;h1&gt;, &lt;h2&gt;, &lt;h3&gt; etc. The highlighted lines are indicating new additions to our previous examples.
+							在标准HTML元素上添加class<code>ls-l</code>来添加动画.对于文本需要包含在<code>&lt;div&gt;</code>等元素中。
 						</p>
 						<pre name="code" class="brush: xml; highlight: [10,13];">
 						&lt;div id="layerslider" style="width: 800px; height: 400px;"&gt;
 
-							&lt;!-- slide --&gt;
+							&lt;!-- 层 --&gt;
 							&lt;div class=&quot;ls-slide&quot; data-ls=&quot;slidedelay: 4000; transition2d: 2,7,9;&quot;&gt;
 
-								&lt;!-- slide background --&gt;
+								&lt;!-- 层背景 --&gt;
 								&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;Slide thumbnail&quot;&gt;
 
-								&lt;!-- image layer --&gt;
+								&lt;!-- 图片动画元素 --&gt;
 								&lt;img src=&quot;...&quot; class=&quot;ls-l&quot; alt=&quot;Image layer&quot;&gt;
 
-								&lt;!-- text layer --&gt;
+								&lt;!-- 文本动画元素 --&gt;
 								&lt;h3 class=&quot;ls-l&quot;&gt;I&#039;m a text layer!&lt;/h3&gt;
 
 							&lt;/div&gt;
 						&lt;/div&gt;</pre>
-						<figure>Adding different types of layers into a slide</figure>
+						<figure>添加不同类型的动画元素到层中</figure>
 					</article>
 
 					<!-- Positioning layers -->
 					<article>
-						<h4>Positioning layers</h4>
+						<h4>定位动画元素</h4>
 						<p>
-							Layers are standard HTML elements, and you can set their initial positions with the <code>style</code> attribute.
+							动画元素是标准的HTML元素，可以使用<code>style</code>属性来设置该元素的位置
 						</p>
 						<p>
-							One difference is, however, is that LayerSlider involves animations, and all your layers needs to be positioned manually with the <code>top</code> and <code>left</code> style properties. In the example below you can see the same layers with some style formatting added.
+							不同之处，然而，layerslider涉及到的动画都需要在<code>style</code>属性手动设置<code>left</code>、<code>top</code>位置。在下面的例子中，你可以看到这些属性已经添加。
 						</p>
 						<pre name="code" class="brush: xml;">
 						&lt;div id="layerslider" style="width: 800px; height: 400px;"&gt;
 
-							&lt;!-- slide --&gt;
+							&lt;!-- 层 --&gt;
 							&lt;div class=&quot;ls-slide&quot; data-ls=&quot;slidedelay: 4000; transition2d: 2,7,9;&quot;&gt;
 
-								&lt;!-- slide background --&gt;
+								&lt;!-- 层背景 --&gt;
 								&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;Slide thumbnail&quot;&gt;
 
-								&lt;!-- image layer --&gt;
+								&lt;!-- 图片动画元素 --&gt;
 								&lt;img src=&quot;...&quot; class=&quot;ls-l&quot; style=&quot;top: 10px; left: 10px;&quot; alt=&quot;Image layer&quot;&gt;
 
-								&amp;lt;!-- text layer --&amp;gt;
+								&lt;!-- 文本动画元素 --&gt;
 								&lt;h3 class=&quot;ls-l&quot; style=&quot;top: 50%; left: 50%; font-size: 18px;&quot;&gt;I&#039;m a text layer!&lt;/h3&gt;
 
 							&lt;/div&gt;
 						&lt;/div&gt;</pre>
-						<figure>Positioning layers with using of style attributes</figure>
+						<figure>用 <code>style</code>属性定位动画元素</figure>
 
-						<h4>Additional notes</h4>
-						<p>Notice the second layer with using percents. Percentage values in LayerSlider works a bit differently than web standards; LayerSlider will always place the center of layers to the given position instead of their sides. This makes easy to position layers exactly to the center by setting the values 50% 50%.</p>
+						<h4>补充说明</h4>
+						<p>注意第二个动画元素使用了百分比. 本插件的百分比计算方式不同web标准; LayerSlider问题将给定的位置做为中心位置.这样设置<code>top:50%;left:50%</code>就能将动画元素恰好定位到层的中心位置.</p>
 
-						<h4>Sizing and wrapping text layers</h4>
+						<h4>文本动画元素包裹层的大小</h4>
 						<p>
 							By default text layers don't have fixed width so there could be strange anomalies while a text layer with lots of text is sliding in. In this case please add a width (in pixels or in percentage) to the layer.
 						</p>
@@ -1168,97 +1169,97 @@
 
 					<!-- Linking layers -->
 					<article>
-						<h4>Linking layers</h4>
+						<h4>动画元素链接</h4>
 						<p>
-							You can link layers by wrapping them with a regular HTML <code>&lt;a&gt;</code> element. In this case, the <code>&lt;a&gt;</code> element becomes the layer itself, and you need to apply all the layer settings on that element instead of your "actual" layer.
+							你可以通过 <code>&lt;a&gt;</code> 标签来设置元素链接. 这种情况下, <code>&lt;a&gt;</code> 元素便成了动画元素本身, 你需要将动画属性添加到<code>&lt;a&gt;</code>元素上，而不是他的子元素上.
 						</p>
 						<pre name="code" class="brush: xml">
-						&lt;!-- Slide --&gt;
+						&lt;!-- 层 --&gt;
 						&lt;div class=&quot;ls-slide&quot;&gt;
 
-							&lt;!-- A regular slide background --&gt;
+							&lt;!-- 一个普通的幻灯片背景 --&gt;
 							&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;&quot;&gt;
 
-							&lt;!-- Linking an image --&gt;
+							&lt;!-- 一个带链接的图片 --&gt;
 							&lt;a href=&quot;http://example.com&quot; class=&quot;ls-l&quot; data-ls=&quot;offsetxin: -100; fadein: false; rotatein: 90;&quot;&gt;
 								&lt;img src=&quot;...&quot; alt=&quot;layer image&quot;&gt;
 							&lt;/a&gt;
 						&lt;/div&gt;</pre>
-						<figure>Linking a layer</figure>
+						<figure>链接层</figure>
 
-						<h4>Creating a link to another slide in the slider</h4>
-						<p>You can link layers pointing to slides with the <code>ls-linkto-&lt;n&gt;</code> special class. Replace the &lt;n&gt; placeholder in the class name with the slider number you want to switch. When these layers are clicked the slider will immediately switch to the corresponding slide you are referencing for in the class name. See the example below.</p>
+						<h4>在层上创建一个链接，链接到另一个层</h4>
+						<p>你可以链接到指定的层，在class中添加<code>ls-linkto-&lt;n&gt;</code>类名.把 n 替换成你想跳转的层的索引. 当这个带链接的层被点击时会立即跳转到指定的层. 详见下面的示例.</p>
 						<pre name="code" class="brush: xml">
-						&lt;!-- slide --&gt;
+						&lt;!-- 层 --&gt;
 						&lt;div class=&quot;ls-slide&quot;&gt;
 
-							&lt;!-- slide background --&gt;
+							&lt;!-- 背景图片 --&gt;
 							&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;&quot;&gt;
 
-							&lt;!-- the slider will switch to the third slide when clicked --&gt;
+							&lt;!-- 这个动画元素被点击时会立即跳转到第3个层 --&gt;
 							&lt;img src=&quot;...&quot; class=&quot;ls-l ls-linkto-3&quot; data-ls=&quot;offsetxin: -100; fadein: false; rotatein: 90;&quot; alt=&quot;layer image&quot;&gt;
 						&lt;/div&gt;</pre>
-						<figure>Creating a link to another slide</figure>
+						<figure>创建一个链接跳转到另一个层</figure>
 
 					</article>
 
 					<!-- Embedding video/audio -->
 					<article>
-						<h4>Embedding YouTube and Vimeo videos</h4>
-						<p>You can include YouTube and Vimeo videos in slides by inserting their embed code into <code>&lt;div&gt;</code> layer. The embed code can be found on the corresponding video page on YouTube/Vimeo. LayerSlider will follow the dimensions specified in the embed code, thus you can also set them there. Alternatively, you can override it within your CSS stylesheets.</p>
+						<h4>嵌入YouTube和Vimeo视频</h4>
+						<p>你可以动画元素中插入YouTube和Vimeo视频，并把它们入到<code>&lt;div&gt;</code>中. LayerSlider将使用视频的尺寸, 你还可以使用<code>css</code>属性来覆盖默认尺寸</p>
 						<pre name="code" class="brush: xml">
-						&lt;!-- Slide --&gt;
+						&lt;!-- 层 --&gt;
 						&lt;div class=&quot;ls-slide&quot;&gt;
 
-							&lt;!-- A regular slide background --&gt;
+							&lt;!-- 背景 --&gt;
 							&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;&quot;&gt;
 
-							&lt;!-- YouTube/Vimeo video --&gt;
+							&lt;!-- 视频 --&gt;
 							&lt;div class=&quot;ls-l&quot; data-ls=&quot;offsetxin: 0; offsetyin: 0;&quot;&gt;
 								&lt;iframe width=&quot;560&quot; height=&quot;315&quot; src=&quot;//www.youtube.com/embed/lX6JcybgDFo&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;</pre>
-						<figure>Embedding YouTube video</figure>
+						<figure>嵌入视频</figure>
 
-						<h4>Embedding (optionally self-hosted) HTML5 videos</h4>
-						<p>Embedding self-hosted videos involves the HTML5 <code>&lt;video&gt;</code> element. You can find a detailed guide on <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video" target="_blank">this</a> MDN page. The principal is the same described above. Here is a modified example:</p>
+						<h4>嵌入HTML5视频(支持本地视频)</h4>
+						<p>使用HTML5的 <code>&lt;video&gt;</code> 标签嵌入本地视频. 你可以在<a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video" target="_blank"> MDN页面</a>查看video详细用法. 下面是一个修改的示例:</p>
 						<pre name="code" class="brush: xml">
-						&lt;!-- Slide --&gt;
+						&lt;!-- 层 --&gt;
 						&lt;div class=&quot;ls-slide&quot;&gt;
 
-							&lt;!-- A regular slide background --&gt;
+							&lt;!-- 背景 --&gt;
 							&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;&quot;&gt;
 
-							&lt;!-- Self-hosted HTML5 video --&gt;
+							&lt;!-- 本地视频 --&gt;
 							&lt;div class=&quot;ls-l&quot; data-ls=&quot;offsetxin: 0; offsetyin: 0;&quot;&gt;
 								&lt;video src=&quot;http://v2v.cc/~j/theora_testsuite/320x240.ogg&quot; controls&gt;&lt;/video&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;</pre>
-						<figure>Embedding HTML5 video</figure>
+						<figure>使用HTML5的video标签嵌入本地视频</figure>
 
-						<h4>Adding (optionally self-hosted) HTML5 audio</h4>
-						<p>You can include self-hosted audio with the HTML5 <code>&lt;audio&gt;</code> element. You can find a detailed guide on <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video" target="_blank">this</a> MDN page. The principal is the same described above. Here is a modified example:</p>
+						<h4>使用HTML5的audio标签添加一个音频（支持本地音频）</h4>
+						<p>你可以全用HTML5的 <code>&lt;audio&gt;</code> 标签添加一个本地音频. 你可以在 <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Using_HTML5_audio_and_video" target="_blank">MDN页面</a> 查看audio的详细用法. 下面是一个修改而来的示例:</p>
 						<pre name="code" class="brush: xml">
-						&lt;!-- Slide --&gt;
+						&lt;!-- 层 --&gt;
 						&lt;div class=&quot;ls-slide&quot;&gt;
 
-							&lt;!-- A regular slide background --&gt;
+							&lt;!-- 背景 --&gt;
 							&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;&quot;&gt;
 
-							&lt;!-- Self-hosted HTML5 audio --&gt;
+							&lt;!-- 使用HTML5的audio标签插入的本地音频 --&gt;
 							&lt;div class=&quot;ls-l&quot; data-ls=&quot;offsetxin: 0; offsetyin: 0;&quot;&gt;
 								&lt;audio src=&quot;/test/audio.ogg&quot;&gt;&lt;/audio&gt;
 							&lt;/div&gt;
 						&lt;/div&gt;</pre>
-						<figure>Adding HTML5 audio</figure>
+						<figure>添加一个音频</figure>
 
 					</article>
 
 					<!-- Layer transitions -->
 					<article>
-						<h4>Layer transitions</h4>
+						<h4>动画元素的过度方式</h4>
 						<p>
-							The transition options can be set with the <code>data-ls</code> attribute in the same way as we used it for slides. Layers don't have any specific settings; all options are responsible for making unique transitions.
+							过度选项设置在动画元素的 <code>data-ls</code> 属性中，不需要其它特殊设置。不同的选项有不同的过度方式。
 						</p>
 						<pre name="code" class="brush: xml;">
 						&lt;div id="layerslider" style="width: 800px; height: 400px;"&gt;
@@ -1277,15 +1278,15 @@
 
 							&lt;/div&gt;
 						&lt;/div&gt;</pre>
-						<figure>Adding transition options to layers</figure>
+						<figure>给动画元素添加一些过度方式</figure>
 						<div class="table">
 							<table>
 								<thead>
 									<tr>
-										<th>Option</th>
-										<th class="c">Values</th>
-										<th class="c">Defaults</th>
-										<th>Description</th>
+										<th>参数</th>
+										<th class="c">值</th>
+										<th class="c">默认值</th>
+										<th>描述</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -1428,32 +1429,31 @@
 					<!-- Parallax layers -->
 
 					<article>
-						<h4>Parallax layers</h4>
-						<p>
-							We added this nice feature to create a fancy parallax effect by moving your mouse over the slider. To use, you will need to add a special property called <code>parallaxlevel</code> to the layer.
-						</p>
+						<h4>视差层</h4>
+						<p>鼠标滑动到层上动画元素的会跟随鼠标方向产生偏移。要使用，你需要添加一个名为<code>parallaxlevel</code>参数到<code>data-ls</code>属性</p>
+						<p><img src="./assets/img/1.gif" style="width: 100%;"/></p>
 						<pre name="code" class="brush: xml;">
 						&lt;div id="layerslider" style="width: 800px; height: 400px;"&gt;
 
-							&lt;!-- slide --&gt;
+							&lt;!-- 层 --&gt;
 							&lt;div class=&quot;ls-slide&quot; data-ls=&quot;slidedelay: 4000; transition2d: 2,7,9;&quot;&gt;
 
-								&lt;!-- slide background --&gt;
+								&lt;!-- 层背景图片 --&gt;
 								&lt;img src=&quot;...&quot; class=&quot;ls-bg&quot; alt=&quot;Slide thumbnail&quot;&gt;
 
-								&lt;!-- image layer --&gt;
+								&lt;!-- 图片动画元素 --&gt;
 								&lt;img src=&quot;...&quot; class=&quot;ls-l&quot; data-ls=&quot;parallaxlevel: 5;&quot; alt=&quot;Image layer&quot;&gt;
 
-								&lt;!-- text layer --&gt;
+								&lt;!-- 文本动画元素 --&gt;
 								&lt;h3 class=&quot;ls-l&quot; data-ls=&quot;parallaxlevel: -1;&quot; style=&quot;top: 50%; left: 50%;&quot;&gt;I&#039;m a text layer!&lt;/h3&gt;
 
 							&lt;/div&gt;
 						&lt;/div&gt;</pre>
-						<figure>Using parallax layers</figure>
+						<figure>使用动画层视差效果</figure>
 
 						<div class="km-notification info cf">
 							<span class="icon-info-circled"></span>
-							You can use both positive or negative values (for opposite directions).
+							可以用正负值（负值表示相反的方向）。
 						</div>
 					</article>
 
