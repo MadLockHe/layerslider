@@ -348,22 +348,22 @@
 					<!-- List of slider settings -->
 					<article>
 						<h4>配置滑块</h4>
-						<p>LayerSlider有一些参数来自定义你的滑块. These options can be defined by passing an object with your changed values. The nex example shows how to include some custom properties.</p>
+						<p>LayerSlider有一些参数来自定义你的滑块. 你可改变这些参数的值来定义一个对象. 下面的例子展示了如何包含一些自定义属性.</p>
 						<pre name="code" class="brush: js">
 						&lt;script type="text/javascript"&gt;
 
-							// Running the code when the document is ready
+							// 文档加载完成后执行此代码
 							$(document).ready(function(){
 
-								// Calling LayerSlider on the target element with adding custom slider options
+								// 调用 LayerSlider 目标元素并添加滑块的一些参数。
 								$('#layerslider').layerSlider({
 									autoStart: false,
 									firstLayer: 2,
 									skin: 'borderlesslight',
 									skinsPath: '/static/layerslider/skins/'
 
-									// Please make sure that you didn't forget to add a comma to the line endings
-									// except the last line!
+									// 请注意每个参数后面的逗号
+									// 除了最后一个参数
 								});
 							});
 
@@ -391,7 +391,7 @@
 										<td>responsiveUnder</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">0 (disabled)</td>
-										<td>Turns on responsiveness under a specified value of width. Useful on full width sliders. If using this, the normal responsive property should be set to false!</td>
+										<td>在规定的值内打开响应式。一般用在全宽滑块。如果使用些参数，需将 <code>responsive</code> 属性设置为 true。</td>
 									</tr>
 									<tr>
 										<td>layersContainer</td>
@@ -403,24 +403,24 @@
 										<td>hideOnMobile</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">false</td>
-										<td>Hides the slider on mobile devices.</td>
+										<td>在移动端隐藏滑块.</td>
 									</tr>
 									<tr>
 										<td>hideUnder</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">0</td>
-										<td>Hides the slider under the given value of browser width in pixels.</td>
+										<td>如何浏览器宽度小于给定的值，则隐藏滑块.</td>
 									</tr>
 									<tr>
 										<td>hideOver</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">100000</td>
-										<td>Hides the slider over the given value of browser width in pixel.</td>
+										<td>如何浏览器宽度大于给定的值，则隐藏滑块.</td>
 									</tr>
 								</tbody>
 								<thead>
 									<tr>
-										<th colspan="4">Slideshow properties</th>
+										<th colspan="4">层属性</th>
 									</tr>
 								</thead>
 								<tbody>
@@ -428,61 +428,61 @@
 										<td>autoStart</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">true</td>
-										<td>Slideshow will automatically start after pages have loaded.</td>
+										<td>页面加载完成后自动播放.</td>
 									</tr>
 									<tr>
 										<td>startInViewport</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">true</td>
-										<td>The slider will start only if it enters into the viewport.</td>
+										<td>滑块进入窗口后开始播放.</td>
 									</tr>
 									<tr>
 										<td>pauseOnHover</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">true</td>
-										<td>Slideshow will temporally pause when someone moves the mouse cursor over the slider.</td>
+										<td>鼠标移动到滑块中暂停播放.</td>
 									</tr>
 									<tr>
 										<td>firstSlide</td>
 										<td class="c"> number<br>'random' </td>
 										<td class="c">1</td>
-										<td>The slider will start with the specified slide.</td>
+										<td>设置第一张播放的滑块.</td>
 									</tr>
 									<tr>
 										<td>animateFirstSlide</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">true</td>
-										<td>Disabling this option will result a static starting slide for the fisrt time on page load.</td>
+										<td>禁用此选项第一张播放的滑块没有动画效果.</td>
 									</tr>
 									<tr>
 										<td>sliderFadeInDuration</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">350</td>
-										<td>The duration of the fade transition (in ms) when the slider is showing up for the first time on page load.</td>
+										<td>滑块淡入的持续时间（ms）.</td>
 									</tr>
 									<tr>
 										<td>loops</td>
 										<td class="c">&lt;num&gt;</td>
 										<td class="c">0</td>
-										<td>Number of loops if automatically start slideshow is enabled (0 means infinite!)</td>
+										<td>如果设置<code>autoStart</code>设置为 true，循环播放的次数 (0 表示无限循环!)</td>
 									</tr>
 									<tr>
 										<td>forceLoopNum</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">true</td>
-										<td>The slider will always stop at the given number of loops, even if someone restarts slideshow.</td>
+										<td>滑块总是循环指定次数，即使重启滑块.</td>
 									</tr>
 									<tr>
 										<td>twoWaySlideshow</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">false</td>
-										<td>Slideshow can go backwards if someone switch to a previous slide.</td>
+										<td>如果点击了 反向 按钮，滑块将反向播放.</td>
 									</tr>
 									<tr>
 										<td>randomSlideshow</td>
 										<td class="c"> true<br>false </td>
 										<td class="c">false</td>
-										<td>If true, LayerSlider will change to a random slide. Please note that 'loops' feature won't work with randomSlideshow!.</td>
+										<td>如果设置为true, LayerSlider将随机播放. <code>loops</code>参数将失效！</td>
 									</tr>
 								</tbody>
 								<thead>

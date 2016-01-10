@@ -5,11 +5,11 @@
 <title></title>
 <!-- LayerSlider样式 -->
 <link rel="stylesheet" href="../layerslider/css/layerslider.css" type="text/css">
- 
+
 <!-- 外部库  jQuery & GreenSock -->
 <script src="../layerslider/js/jquery.js" type="text/javascript"></script>
 <script src="../layerslider/js/greensock.js" type="text/javascript"></script>
- 
+
 <!-- LayerSlider 库文件 -->
 <script src="../layerslider/js/layerslider.transitions.js" type="text/javascript"></script>
 <script src="../layerslider/js/layerslider.kreaturamedia.jquery.js" type="text/javascript"></script>
@@ -43,8 +43,8 @@
 		</div>
 	</div>
 </div>
-<script type="text/javascript"> 
-$(document).ready(function(){ 
+<script type="text/javascript">
+$(document).ready(function(){
     $('#layerslider').layerSlider({
     	autoStart: true,
         firstLayer: 1,
@@ -52,8 +52,13 @@ $(document).ready(function(){
         skinsPath: '../layerslider/skins/',
         responsive:false,
         responsiveUnder:800,
+        hideOnMobile:true,
+        hideUnder:700,//浏览器宽度小于这个值，隐藏滑块
+        hideOver:1700,//浏览器宽度大于这个值，隐藏滑块
+        animateFirstSlide:false,
+        twoWaySlideshow:true
     });
-}); 
+});
 </script>
 </body>
 </html>
